@@ -28,6 +28,10 @@ let package = Package(
         .target(
             name: "GoogleMapsTarget",
             dependencies: ["GoogleMaps", "GoogleMapsBase", "GoogleMapsCore"],
+            path: "Maps",
+            sources: ["GMSEmpty.m"],
+            resources: [.copy("Resources/GoogleMapsResources/GoogleMaps.bundle")],
+            publicHeadersPath: "Sources",
             linkerSettings: [
                 .linkedLibrary("c++"),
                 .linkedLibrary("z"),
